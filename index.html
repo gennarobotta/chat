@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<title>Socket.IO chat</title>
+</head>
+
+<body>
+	<p id="message"></p>
+
+	<script>
+		var socket = io();
+
+		var messages = document.getElementById('message');
+
+		socket.on('connection started', function (msg) {
+			message.textContent = "Connection startd at: " + msg
+		});
+	</script>
+</body>
+
+</html>
